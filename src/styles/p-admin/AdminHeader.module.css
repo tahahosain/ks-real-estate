@@ -1,0 +1,224 @@
+.header {
+  width: 100%;
+  min-height: 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem 0 2.5rem;
+
+  border-bottom: 1px solid #ddd9d0;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.breadcrumb {
+  color: #777b77;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.title {
+  margin: 0;
+
+  color: #202522;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.notificationButton {
+  position: relative;
+
+  width: 4.4rem;
+  height: 4.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ddd9d0;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #173f35;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.notificationButton:hover {
+  background: #f6f4ef;
+  border-color: #c79a5a;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -0.3rem;
+  left: -0.2rem;
+
+  min-width: 1.8rem;
+  height: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0.4rem;
+
+  border-radius: 50%;
+
+  background: #a94442;
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.menuButton {
+  display: none;
+
+  width: 4.4rem;
+  height: 4.4rem;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ddd9d0;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #173f35;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.menuButton:hover {
+  background: #f6f4ef;
+  border-color: #c79a5a;
+}
+
+@media (max-width: 700px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .rightSection {
+    gap: 1rem;
+  }
+}
+
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  text-decoration: none;
+}
+
+.avatar {
+  width: 4.6rem;
+  height: 4.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #173f35;
+  color: #ffffff;
+
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.profileName {
+  color: #202522;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.profileRole {
+  color: #777b77;
+  font-size: 1.1rem;
+}
+
+/* -------------------- */
+/* Tablet */
+/* -------------------- */
+
+@media (max-width: 900px) {
+  .header {
+    min-height: 7rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .profileInfo {
+    display: none;
+  }
+}
+
+/* -------------------- */
+/* Mobile */
+/* -------------------- */
+
+@media (max-width: 700px) {
+  .header {
+    padding: 1rem 0 1.8rem;
+  }
+
+  .breadcrumb {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .leftSection {
+    gap: 1rem;
+  }
+
+  .notificationButton {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+}

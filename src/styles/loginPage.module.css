@@ -1,0 +1,7 @@
+.loginPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var( --color-gray-light-2);
+}

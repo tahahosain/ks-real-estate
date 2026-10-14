@@ -1,0 +1,43 @@
+.button{
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+    border-radius:8px;
+    font-family:inherit;
+    color:var(--color-gray-light-1) ;
+}
+
+.primary{
+background:var( --color-secondry-light);
+
+}
+
+.primary:hover{
+    background:#5319a3;
+}
+
+.secondary{
+    background:#101d2c;
+    color:#fff;
+}
+
+.outline{
+    background:transparent;
+    border:2px solid #774dc4;
+    color:#4631ad;
+}
+
+.sm{
+    padding:.8rem 1.6rem;
+    font-size:1.4rem;
+}
+
+.md{
+    padding:1.2rem 2.4rem;
+    font-size:1.6rem;
+}
+
+.lg{
+    padding:1.6rem 3.2rem;
+    font-size:1.8rem;
+}

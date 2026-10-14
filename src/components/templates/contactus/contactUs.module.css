@@ -1,0 +1,374 @@
+.contactPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f7f5;
+  margin-top: 6rem;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  width: 100%;
+  min-height: 30rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5rem 2rem;
+
+  background:
+    linear-gradient(
+      rgba(16, 29, 44, 0.88),
+      rgba(16, 29, 44, 0.88)
+    ),
+    url("/img/back.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 70rem;
+  color: #fff;
+}
+
+.heroContent span {
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.heroContent h1 {
+  margin: 0 0 1.5rem;
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 800;
+}
+
+.heroContent p {
+  margin: 0;
+
+  color: #e5e5e5;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* =========================
+   Contact Section
+========================= */
+
+.contactSection {
+  width: min(120rem, 100%);
+
+  margin: 0 auto;
+  padding: 6rem 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+
+  gap: 5rem;
+}
+
+/* =========================
+   Titles
+========================= */
+
+.sectionTitle {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle span {
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.sectionTitle h2 {
+  margin: 0;
+
+  color: var(--color-secondary);
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   Information
+========================= */
+
+.info {
+  padding: 3rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(198, 153, 99, 0.12);
+
+  color: var(--color-primary);
+
+  font-size: 2.2rem;
+}
+
+.infoItem h3 {
+  margin: 0 0 0.5rem;
+
+  color: var(--color-secondary);
+
+  font-size: 1.6rem;
+}
+
+.infoItem p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Form
+========================= */
+
+.formWrapper {
+  padding: 3rem;
+
+  background: #fff;
+
+  border-radius: 1.6rem;
+
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.07);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.8rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.7rem;
+}
+
+.field label {
+  color: var(--color-secondary);
+
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+
+  padding: 1.3rem 1.4rem;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 0.8rem;
+
+  background: #fafafa;
+
+  color: var(--color-text-primary);
+
+  font-family: inherit;
+  font-size: 1.4rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.field input {
+  height: 4.8rem;
+}
+
+.field textarea {
+  min-height: 14rem;
+
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--color-primary);
+
+  background: #fff;
+
+  box-shadow: 0 0 0 0.3rem rgba(198, 153, 99, 0.12);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #aaa;
+}
+
+/* =========================
+   Button
+========================= */
+
+.submitButton {
+  width: 100%;
+  min-height: 5rem;
+
+  margin-top: 0.5rem;
+
+  border: none;
+  border-radius: 0.8rem;
+
+  background: var(--color-gray-dark-2);
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-0.2rem);
+
+  background: var(--color-primary);
+
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+}
+.error {
+  display: block;
+  margin-top: 0.5rem;
+  color: #d32f2f;
+  font-size: 1.2rem;
+}
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .contactSection {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    padding: 5rem 2rem;
+  }
+
+  .info {
+    padding: 2rem 1rem;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 25rem;
+
+    padding: 4rem 1.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1.4rem;
+  }
+
+  .contactSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .info,
+  .formWrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .infoItem {
+    align-items: flex-start;
+  }
+
+  .icon {
+    width: 4.5rem;
+    height: 4.5rem;
+
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   Very Small Mobile
+========================= */
+
+@media (max-width: 400px) {
+  .heroContent h1 {
+    font-size: 2.6rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 1.8rem;
+  }
+
+  .infoItem p {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,192 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+/* =========================
+   Pictures
+========================= */
+
+.pictures {
+  grid-column: 1 / 2;
+
+  background-image:
+    linear-gradient(
+      rgba(198, 153, 99, 0.75),
+      rgba(178, 133, 81, 0.75)
+    ),
+    url("/img/back.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  align-items: center;
+
+  min-height: 55rem;
+}
+
+.imageMain {
+  position: relative;
+
+  grid-column: 2 / 6;
+  grid-row: 2 / 6;
+
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.imageMain img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.imageSecondary {
+  position: relative;
+  top: -15px;
+
+  grid-column: 4 / 7;
+  grid-row: 1 / 4;
+
+  width: 80%;
+  aspect-ratio: 4 / 3;
+
+  z-index: 10;
+}
+
+.imageSecondary img {
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   Content
+========================= */
+
+.content {
+  grid-column: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 8rem 6vw;
+
+  background: var(--color-gray-light-1);
+}
+
+.text {
+  margin: 2rem 0 4rem;
+  line-height: 2;
+  font-size: 1.6rem;
+}
+
+/* =========================
+   Tablet
+   768px
+========================= */
+
+@media (max-width: 991px) {
+  .pictures {
+    min-height: 45rem;
+  }
+
+  .content {
+    padding: 5rem 4rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 3rem;
+  }
+}
+
+/* =========================
+   Mobile
+   767px
+========================= */
+
+@media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .pictures {
+    grid-column: 1 / -1;
+
+    min-height: auto;
+
+    padding: 4rem 2rem;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    aspect-ratio: 1 / 0.85;
+  }
+
+  .imageMain {
+    grid-column: 1 / 6;
+    grid-row: 2 / 6;
+
+    width: 100%;
+  }
+
+  .imageSecondary {
+    grid-column: 4 / 7;
+    grid-row: 1 / 4;
+
+    width: 90%;
+    top: 0;
+  }
+
+  .content {
+    grid-column: 1 / -1;
+
+    padding: 5rem 2.5rem;
+
+    text-align: center;
+    align-items: center;
+  }
+
+  .text {
+    max-width: 55rem;
+    margin: 2rem 0 3rem;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+
+/* =========================
+   Small Mobile
+   480px
+========================= */
+
+@media (max-width: 480px) {
+  .pictures {
+    padding: 3rem 1.5rem;
+    aspect-ratio: 1 / 0.9;
+  }
+
+  .imageMain {
+    grid-column: 1 / 6;
+    grid-row: 2 / 6;
+  }
+
+  .imageSecondary {
+    grid-column: 4 / 7;
+    grid-row: 1 / 4;
+  }
+
+  .content {
+    padding: 4rem 1.8rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+}

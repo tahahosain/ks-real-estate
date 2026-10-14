@@ -1,0 +1,155 @@
+.featurs {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 7rem 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4rem 3rem;
+}
+
+/* =========================
+   Feature
+========================= */
+
+.featur {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.8rem;
+  row-gap: 1rem;
+  align-content: start;
+}
+
+.featur__icon {
+  grid-row: 1 / span 2;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: var(--color-primary);
+  font-size: 4rem;
+
+  transform: translateY(-0.5rem);
+
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.featur:hover .featur__icon {
+  transform: translateY(-0.5rem) scale(1.08);
+  color: var(--color-primary-dark);
+}
+
+/* =========================
+   Heading
+========================= */
+
+.featur h4 {
+  margin: 0;
+
+  color: var(--color-secondry);
+  font-size: 1.7rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+/* =========================
+   Paragraph
+========================= */
+
+.featur p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+  font-size: 1.4rem;
+  line-height: 2;
+
+  text-align: justify;
+}
+
+/* =========================
+   Tablet
+   992px
+========================= */
+
+@media (max-width: 991px) {
+  .featurs {
+    padding: 6rem 2.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3.5rem 2.5rem;
+  }
+
+  .featur__icon {
+    font-size: 3.6rem;
+  }
+
+  .featur h4 {
+    font-size: 1.6rem;
+  }
+
+  .featur p {
+    font-size: 1.35rem;
+  }
+}
+
+/* =========================
+   Mobile
+   768px
+========================= */
+
+@media (max-width: 767px) {
+  .featurs {
+    padding: 5rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .featur {
+    column-gap: 1.5rem;
+  }
+
+  .featur__icon {
+    font-size: 3.5rem;
+  }
+
+  .featur h4 {
+    font-size: 1.7rem;
+  }
+
+  .featur p {
+    font-size: 1.4rem;
+    line-height: 1.9;
+  }
+}
+
+/* =========================
+   Small Mobile
+   480px
+========================= */
+
+@media (max-width: 480px) {
+  .featurs {
+    padding: 4rem 1.5rem;
+    gap: 3rem;
+  }
+
+  .featur {
+    column-gap: 1.2rem;
+  }
+
+  .featur__icon {
+    font-size: 3rem;
+  }
+
+  .featur h4 {
+    font-size: 1.5rem;
+  }
+
+  .featur p {
+    font-size: 1.3rem;
+  }
+}

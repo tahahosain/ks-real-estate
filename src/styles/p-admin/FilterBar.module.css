@@ -1,0 +1,133 @@
+.filterBar {
+  display: grid;
+  grid-template-columns:
+    minmax(22rem, 2fr)
+    repeat(5, minmax(13rem, 1fr))
+    auto;
+
+  gap: 1.4rem;
+  align-items: end;
+
+  margin-bottom: 2rem;
+  padding: 2rem;
+
+  background: #ffffff;
+  border: 1px solid #ddd9d0;
+  border-radius: 1.6rem;
+}
+
+.searchWrapper,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.searchWrapper label,
+.field label {
+  color: #555b57;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.searchWrapper input,
+.field input,
+.field select {
+  width: 100%;
+  height: 4.2rem;
+  padding: 0 1.2rem;
+
+  background: #ffffff;
+  border: 1px solid #d8d5cd;
+  border-radius: 0.8rem;
+
+  color: #202522;
+  font-family: inherit;
+  font-size: 1.3rem;
+
+  outline: none;
+}
+
+.searchWrapper input:focus,
+.field input:focus,
+.field select:focus {
+  border-color: #173f35;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.submitButton,
+.resetButton {
+  height: 4.2rem;
+  padding: 0 1.4rem;
+
+  border-radius: 0.8rem;
+
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submitButton {
+  border: 1px solid #173f35;
+  background: #173f35;
+  color: #ffffff;
+}
+
+.submitButton:hover {
+  background: #205447;
+}
+
+.resetButton {
+  border: 1px solid #ddd9d0;
+  background: #ffffff;
+  color: #555b57;
+}
+
+.resetButton:hover {
+  background: #f6f4ef;
+}
+
+@media (max-width: 1300px) {
+  .filterBar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .searchWrapper {
+    grid-column: span 3;
+  }
+
+  .actions {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .filterBar {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .searchWrapper,
+  .actions {
+    grid-column: auto;
+  }
+
+  .actions {
+   
+    
+    flex-direction: column;
+  }
+
+  .submitButton,
+  .resetButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,41 @@
+.adminLayout {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+ 
+
+  background: #f6f4ef;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+
+  padding: 3rem;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .mainContent {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .adminLayout {
+    display: block;
+  }
+
+  .mainContent {
+    min-height: 100vh;
+    padding: 1.6rem;
+  }
+}

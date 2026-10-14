@@ -1,0 +1,73 @@
+/* ==============================
+   SweetAlert2 - Admin Dashboard
+================================ */
+
+.adminSwalPopup {
+  width: 42rem;
+  border-radius: 1.6rem;
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 2rem 5rem rgba(16, 29, 44, 0.18);
+  font-family: inherit;
+}
+
+.adminSwalTitle {
+  margin-top: 1rem;
+  color: #101d2c;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.adminSwalText {
+  color: #64748b;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.adminSwalConfirm {
+  min-width: 11rem;
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #b28451;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.adminSwalConfirm:hover {
+  background: #9d7041;
+}
+
+.adminSwalCancel {
+  min-width: 10rem;
+  padding: 1rem 1.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.8rem;
+  background: #f8fafc;
+  color: #475569;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.adminSwalCancel:hover {
+  background: #f1f5f9;
+}
+
+.adminSwalLoader {
+  color: #b28451;
+}
+
+.adminSwalSuccess {
+  color: #16a34a;
+}
+
+.adminSwalError {
+  color: #dc2626;
+}

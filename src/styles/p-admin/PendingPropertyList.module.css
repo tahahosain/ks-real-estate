@@ -1,0 +1,170 @@
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  overflow: hidden;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #eee;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pendingBadge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-full);
+  background: #f59e0b;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.body {
+  padding: 1.6rem;
+}
+
+.title {
+  margin: 0 0 0.8rem;
+  color: var(--color-secondry);
+  font-size: 1.8rem;
+}
+
+.address {
+  margin: 0 0 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail {
+  padding: 1rem;
+  background: var(--color-gray-light-1);
+  border-radius: var(--radius-sm);
+}
+
+.detail span,
+.price span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+}
+
+.detail strong {
+  color: var(--color-secondry);
+  font-size: 1.3rem;
+}
+
+.price {
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-sm);
+  background: #faf7f2;
+}
+
+.price strong {
+  color: var(--color-primary-dark);
+  font-size: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actions button {
+  flex: 1;
+  min-height: 4.2rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+.detailsButton {
+  flex: 1;
+  min-height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--color-secondry);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.detailsButton:hover {
+  opacity: 0.85;
+}
+.actions button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.approveButton {
+  background: #16a34a;
+  color: #fff;
+}
+
+.rejectButton {
+  background: #dc2626;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    height: 24rem;
+  }
+}

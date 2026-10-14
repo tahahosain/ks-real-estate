@@ -1,0 +1,237 @@
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(18rem, 25vw, 28rem);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 1.6rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.12);
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+/* =========================
+   Body
+========================= */
+
+.body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-secondry);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   Price
+========================= */
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.footer button {
+  width: 100%;
+}
+
+/* =========================
+   Favorite
+========================= */
+
+.favoriteButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  width: 3.8rem;
+  height: 3.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(0.4rem);
+
+  color: #555;
+  font-size: 2.2rem;
+
+  cursor: pointer;
+  z-index: 2;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.favoriteButton:hover {
+  transform: scale(1.1);
+  background: var(--color-white);
+}
+
+/* =========================
+   Tablet
+   576px
+========================= */
+
+@media (min-width: 576px) {
+  .body {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .address {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+}
+
+/* =========================
+   Tablet
+   768px
+========================= */
+
+@media (min-width: 768px) {
+  .body {
+    padding: 1.6rem;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .address {
+    font-size: 1.4rem;
+  }
+
+  .favoriteButton {
+    width: 4rem;
+    height: 4rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-size: 2.4rem;
+  }
+}
+
+/* =========================
+   Laptop
+   992px
+========================= */
+
+@media (min-width: 992px) {
+  .body {
+    padding: 1.8rem;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .address {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    padding: 1.6rem 1.8rem;
+  }
+}
+
+/* =========================
+   Desktop
+   1200px
+========================= */
+
+@media (min-width: 1200px) {
+  .price {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .body {
+    padding: 2rem;
+  }
+
+  .footer {
+    padding: 1.8rem 2rem;
+  }
+}
+
+/* =========================
+   Large Desktop
+   1400px
+========================= */
+
+@media (min-width: 1400px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .address {
+    font-size: 1.5rem;
+  }
+}

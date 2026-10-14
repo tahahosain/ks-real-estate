@@ -1,0 +1,89 @@
+
+.statBlock {
+  min-height: 17rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2rem;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd9d0;
+  border-radius: 1.4rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 4.6rem;
+  height: 4.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1.2rem;
+
+  background: #f6f4ef;
+  color: #173f35;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.title {
+  color: #777b77;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.value {
+  color: #202522;
+
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.description {
+  color: #777b77;
+
+  font-size: 1.1rem;
+}
+
+.primary .icon {
+  background: #173f35;
+  color: #ffffff;
+}
+
+.accent .icon {
+  background: #f4eadb;
+  color: #9a713b;
+}
+
+.danger .icon {
+  background: #f8e8e7;
+  color: #a94442;
+}
+
+@media (max-width: 900px) {
+  .statBlock {
+    min-height: 15rem;
+    padding: 1.6rem;
+  }
+
+  .value {
+    font-size: 2.6rem;
+  }
+}
+

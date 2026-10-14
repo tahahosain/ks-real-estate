@@ -1,0 +1,328 @@
+.sidebar {
+  width: 26rem;
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #173f35;
+  color: #ffffff;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   Brand
+========================= */
+
+.brand {
+  min-height: 9rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1.2rem;
+
+  padding: 2rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brandMark {
+  width: 4.6rem;
+  height: 4.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c79a5a;
+  color: #173f35;
+
+  font-size: 2.2rem;
+  font-weight: 900;
+
+  border-radius: 0.8rem;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+
+.brandText strong {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.brandText span {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+.navigation {
+  flex: 1;
+
+  padding: 2rem 1.4rem;
+
+  overflow-y: auto;
+}
+
+.menuLabel {
+  margin: 0 1rem 1rem;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.menuItem {
+  position: relative;
+
+  min-height: 4.8rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1.2rem;
+
+  margin-bottom: 0.4rem;
+  padding: 0 1.2rem;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  text-decoration: none;
+
+  border-radius: 0.6rem;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.menuItem.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.icon {
+  width: 2.2rem;
+  height: 2.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.icon svg {
+  width: 2rem;
+  height: 2rem;
+
+  fill: none;
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.menuTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.activeIndicator {
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  width: 0.3rem;
+  height: 2.4rem;
+
+  transform: translateY(-50%);
+
+  background: #c79a5a;
+
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+
+/* =========================
+   Bottom
+========================= */
+
+.sidebarBottom {
+  padding: 1.6rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.adminProfile {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #c79a5a;
+  color: #173f35;
+
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  border-radius: 50%;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+
+  min-width: 0;
+}
+
+.profileInfo strong {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.profileInfo span {
+  font-size: 1.1rem;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.logoutButton {
+  width: 100%;
+  min-height: 4.6rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 0 1.2rem;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: inherit;
+  font-size: 1.3rem;
+
+  cursor: pointer;
+
+  border-radius: 0.6rem;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.logoutButton:hover {
+  background: rgba(169, 68, 66, 0.16);
+  color: #ffffff;
+}
+
+.logoutIcon {
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+}
+
+.logoutIcon svg {
+  width: 100%;
+  height: 100%;
+
+  fill: none;
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 24rem;
+  }
+}
+
+
+
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 100;
+
+    width: 28rem;
+    max-width: 85vw;
+
+    transform: translateX(100%);
+
+    transition: transform 0.25s ease;
+
+    box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.12);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+}
