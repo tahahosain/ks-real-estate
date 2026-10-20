@@ -1,4 +1,7 @@
 import styles from "./Articles.module.css";
+import Button from "@/components/ui/button/Button";
+import Link from "next/link";
+
 
 import {
   FaGlobe,
@@ -57,17 +60,30 @@ function Articles() {
   ];
 
   return (
-    <section className={styles.featurs}>
-      {features.map((feature) => (
-        <article key={feature.id} className={styles.featur}>
-          <span className={styles.featur__icon}>{feature.icon}</span>
+    <>
+      <div className={styles.sectionHeader}>
+        <div>
+          <span className={styles.sectionSubtitle}>املاک K&S</span>
+          <h2>جدیدترین مقالات</h2>
+          <p>آنچه باید هنگام خرید و فروش یا رهن و اجاره املاک بدانید</p>
+        </div>
 
-          <h4>{feature.title}</h4>
+        <Button className={styles.btn}>
+          <Link href="/homeDetails">مشاهده همه مقالات</Link>
+        </Button>
+      </div>
+      <section className={styles.featurs}>
+        {features.map((feature) => (
+          <article key={feature.id} className={styles.featur}>
+            <span className={styles.featur__icon}>{feature.icon}</span>
 
-          <p>{feature.description}</p>
-        </article>
-      ))}
-    </section>
+            <h4>{feature.title}</h4>
+
+            <p>{feature.description}</p>
+          </article>
+        ))}
+      </section>
+    </>
   );
 }
 

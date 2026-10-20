@@ -10,6 +10,83 @@
   gap: 4rem 3rem;
 }
 
+.sectionHeader {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 4rem auto 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.sectionSubtitle {
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--color-primary-dark);
+
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.sectionHeader h2 {
+  margin: 0 0 1rem;
+
+  color: var(--color-secondry);
+
+  font-size: clamp(2.4rem, 3vw, 3.6rem);
+  font-weight: 700;
+}
+
+.sectionHeader p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.sectionHeader .btn {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+
+.btn {
+  width: 18rem;
+  height: 5rem;
+
+
+  margin: 0 auto 3rem;
+
+  background-color: var(--color-secondry-light);
+  border: none;
+  outline: none;
+  border-radius: var(--radius-md);
+
+  font-family: inherit;
+  font-size: 1.4rem;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+.btn a {
+  color: var(--color-white);
+}
+
 /* =========================
    Feature
 ========================= */
@@ -123,6 +200,15 @@
   .featur p {
     font-size: 1.4rem;
     line-height: 1.9;
+  }
+    .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+
+  .sectionHeader .btn {
+    align-self: flex-start;
   }
 }
 
